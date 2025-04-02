@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Web Development, Website, UI/UX Design">
+    <meta name="description" content="NovaColabs - Elevate your digital presence with innovative web solutions.">
+    <meta name="author" content="NovaColabs">
+    <title>Top Benefits of Having a Business Website - NovaColabs Web Solutions</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-post {
+            padding: 20px; /* Adjust padding for blog post section on mobile */
+            margin-top: 100px;
+        }
+      @media  (max-width: 768px) {
+      
+        .blog-post {
+            padding: 20px; /* Adjust padding for blog post section on mobile */
+            margin-top: 100px;
+        }
+        .blog-post h1 {
+            font-size: 24px; /* Adjust font size for blog post title on mobile */
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__header">
+                <div class="nav__logo"></div>
+                    <a href="#" class="logo" aria-label="NovaColabs Logo">
+                        <img src="images/logo.png" alt="NovaColabs Logo" style="width: 140px; height: auto;">
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a class="btn primary-btn pulse" href="#contact" aria-label="Get in Touch Button">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Blog Post Section -->
+<section class="blog-post py-5">
+    <div class="container">
+        <h1>Top Benefits of Having a Business Website</h1>
+        <p>Learn about the numerous benefits that a well-designed website can bring to your business.</p>
+        <h2>1. Increased Visibility</h2>
+        <p>A website allows your business to be visible to a global audience 24/7. This increased visibility can lead to more customers and higher sales.</p>
+        <h2>2. Improved Credibility</h2>
+        <p>Having a professional website helps establish your business's credibility. Customers are more likely to trust a business with a well-designed website.</p>
+        <h2>3. Better Customer Engagement</h2>
+        <p>A website provides a platform for better customer engagement. You can interact with customers through blogs, forums, and social media integration.</p>
+        <h2>4. Cost-Effective Marketing</h2>
+        <p>A website is a cost-effective marketing tool. You can reach a large audience with minimal investment compared to traditional marketing methods.</p>
+        <h2>5. Detailed Analytics</h2>
+        <p>With a website, you can track visitor behavior and gather valuable data through analytics tools. This data can help you make informed business decisions.</p>
+        <h2>6. Competitive Advantage</h2>
+        <p>Having a website gives you a competitive advantage. If your competitors have websites and you don't, you risk losing potential customers to them.</p>
+        <p>In conclusion, a well-designed website offers numerous benefits, including increased visibility, improved credibility, better customer engagement, cost-effective marketing, detailed analytics, and a competitive advantage.</p>
+    </div>
+</section>
+
+<footer id="footer" class="py-4">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-start text-md-start text-center">
+            <!-- Quick Links -->
+            <div class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer-section contact-info">
+                <h4>Contact Info</h4>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@NovaColabsWebsolutions.com</li>
+                    <li><strong>Phone:</strong> +254717754487</li>
+                </ul>
+            </div>  
+            <!-- Social Media Links -->
+            <div class="footer-section social-icons">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com" class="icon-size"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" class="icon-size"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" class="icon-size"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com" class="icon-size"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p>&copy; 2024 NovaColabs Web solutions. All Rights Reserved.</p>
+            <p>Designed by <a href="#">NovaColabs Web solutions</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js" defer></script>
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure the bounce animation happens only once on page load
+      const elements = document.querySelectorAll('.bounce');
+      elements.forEach(element => {
+        element.classList.add('bounce-once');
+      });
+  
+       // Toggle menu for mobile view with animation
+       const menuBtn = document.getElementById('menu-btn');
+      const navLinks = document.getElementById('nav-links');
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        menuBtn.classList.toggle('open'); // Add class to animate the button
+      });
+  
+      // Close navbar dropdown after clicking a nav link
+      const navLinksItems = document.querySelectorAll('.nav__links a');
+      const navMenu = document.getElementById('nav-links');
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+          }
+        });
+      });
+      // Ensure animations happen once on scroll down
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .zoom-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
+  
+      // ScrollReveal animations
+      const scrollRevealOption = {
+        distance: "50px",
+        origin: "bottom",
+        duration: 700, // Reduced duration for faster animations
+      };
+  
+      ScrollReveal().reveal(".hero__content h1", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal(".hero__content p", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+      ScrollReveal().reveal(".hero__content a", {
+        ...scrollRevealOption,
+        delay: 900,
+      });
+      ScrollReveal().reveal(".hero__image .image", {
+        ...scrollRevealOption,
+        origin: "right",
+        delay: 1200,
+      });
+  
+      ScrollReveal().reveal("#benefits .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#benefits .col-md-4", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#deals .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#deals .deal-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#services .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#services .service-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#portfolio .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#portfolio .portfolio-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#testimonials .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#testimonials .testimonial-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#about h2", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#about p", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+  
+      ScrollReveal().reveal("#blog .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#blog .blog-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#faqs .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#faqs .accordion-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#contact .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#contact form", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+  
+      // FAQ section toggle functionality
+      const faqButtons = document.querySelectorAll('.accordion-button');
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const target = document.querySelector(this.getAttribute('data-bs-target'));
+          const isCollapsed = target.classList.contains('show');
+          if (isCollapsed) {
+            target.classList.remove('show');
+          } else {
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+              collapse.classList.remove('show');
+            });
+            target.classList.add('show');
+          }
+        });
+      });
+  
+      // Contact form submission handling
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent default form submission
+          const form = e.target;
+  
+          fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+          })
+          .then(() => {
+              form.reset(); // Clear the form
+              showPopupMessage("Success! Your message has been sent.", "success"); // Show success message
+          })
+          .catch(() => {
+              showPopupMessage("Oops! Something went wrong. Please try again.", "error"); // Show error message
+          });
+      });
+  
+      // Show WhatsApp popup message regularly
+      const whatsappPopup = document.getElementById('whatsappPopup');
+      setInterval(() => {
+          whatsappPopup.classList.add('show');
+          setTimeout(() => {
+              whatsappPopup.classList.remove('show');
+          }, 3000);
+      }, 10000); // Show every 10 seconds
+  
+      // Function to show popup message
+      function showPopupMessage(message, type) {
+          const popup = document.createElement('div');
+          popup.className = `popup-message ${type} show`;
+          popup.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
+          document.body.appendChild(popup);
+          setTimeout(() => {
+              popup.classList.remove('show');
+              popup.classList.add('hide');
+              setTimeout(() => {
+                  document.body.removeChild(popup);
+              }, 300);
+          }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>

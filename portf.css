@@ -1,0 +1,594 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&display=swap");
+
+:root {
+    --primary-color: #e63946; /* Vibrant Red */
+    --primary-color-dark: #b71c1c; /* Deep Crimson */
+    --accent-color: #ffb703; /* Bold Golden Yellow */
+    --text-dark: #1a1a1a; /* Almost Black */
+    --text-light: #6c757d; /* Subtle Gray */
+    --light: #f1f3f5; /* Soft Light Gray */
+    --extra-light: #ffffff; /* Pure White */
+    --white: #ffffff; /* Background White */
+    --max-width: 1200px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Hide Navbar Toggler on Large Devices */
+/* Responsive Design for Our Deals, Contact Us, and Footer */
+@media (max-width: 768px) {
+    #deals .row > div,
+    #contact .row > div,
+    #footer .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    #footer .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Navbar Customization */
+/* General Styles */
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* ======================
+   Reusable Components
+   ====================== */
+   .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+}
+
+.btn:hover {
+    background-color: linear-gradient(145deg, #ee4f5c, #ff0000);
+    transform: translateY(-3px);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+    }
+}
+
+.btn.pulse {
+    animation: pulse 2s infinite;
+}
+
+
+/* Portfolio Section */
+.portfolio .section-title {
+    margin-bottom: 50px;
+}
+
+.portfolio .section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.owl-carousel {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.owl-carousel .portfolio-item {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.owl-carousel .portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.owl-carousel .portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.owl-carousel .portfolio-item h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Image Zoom on Hover */
+.portfolio .container {
+    padding: 0 15px;
+    margin-top: 100px;
+}
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-image:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Overlay Styling */
+.portfolio-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-overlay .view-website-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay .view-website-btn {
+    opacity: 1;
+}
+
+/* Hover Effects */
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio .owl-carousel .portfolio-item {
+        width: 100%;
+    }
+    .portfolio .container {
+        padding: 0 15px;
+        margin-top: 100px;
+    }
+}
+
+
+
+
+
+
+/* Footer Section */
+#footer {
+    background-color: var(--text-dark); /* Primary Black */
+    color: var(--white); /* Background White */
+    font-size: 14px;
+}
+
+#footer h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#footer p, #footer li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+#footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+#footer ul li a:hover {
+    color: var(--primary-color); /* Bright Red */
+}
+
+/* Footer Layout */
+.footer-section {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin-bottom: 5px;
+}
+/*tech icons*/
+
+.tech-icons {
+    display: flex; /* Arrange icons in a row */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Add space between the icons */
+    margin: 20px 0; /* Add some margin for separation */
+}
+
+.tech-icons i {
+    font-size: 40px; /* Set the size of the icons */
+    color: #666; /* Default gray color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    color: var(--primary-color, #007bff); /* Change color on hover, default to blue */
+}
+
+/* Optional: Customize individual icon colors */
+.tech-icons .fa-html5 {
+    color: #e34f26; /* HTML5 brand color */
+}
+
+.tech-icons .fa-css3-alt {
+    color: #1572b6; /* CSS3 brand color */
+}
+
+.tech-icons .fa-js {
+    color: #f7df1e; /* JavaScript brand color */
+}
+
+.tech-icons .fa-php {
+    color: #787cb5; /* PHP brand color */
+}
+
+/* Social Icons */
+.icon-size {
+  height: 24px; /* Adjust the height */
+  width: auto;  /* Auto adjusts the width proportionally */
+}
+
+@media (max-width: 768px) {
+  .icon-size {
+    height: 20px; /* Smaller size for mobile */
+  }
+}
+
+.social-icons a {
+    color: var(--white); /* Background White */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color); /* Bright Red */
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Apply bounce animation to text and images */
+.bounce {
+    animation: bounce 2s;
+    animation-fill-mode: forwards; /* Ensure the element stays in the final state */
+}
+
+/* Animation classes for scroll */
+.fade-in, .slide-in, .zoom-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.visible, .slide-in.visible, .zoom-in.visible {
+    opacity: 1;
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 100%; /* Ensure it does not cause overflow */
+}
+
+/* WhatsApp Popup Message Styles */
+.whatsapp-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #f3f3f3; /* WhatsApp Green */
+    color: #000000;
+    padding: 30px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.whatsapp-popup.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whatsapp-popup.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Zoom In Animation */
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Apply animations to different sections */
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+.slide-in {
+    animation: slideIn 2s;
+}
+
+.zoom-in {
+    animation: zoomIn 2s;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .header .navigation ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services .service-item {
+        flex: 0 0 100%;
+    }
+
+    .portfolio .owl-carousel .portfolio-item {
+        width: 100%;
+    }
+
+   
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer .social-links li {
+    display: inline-block;
+}
+
+.footer .social-links a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-post h1 {
+        font-size: 28px;
+    }
+
+    .blog-post h2 {
+        font-size: 24px;
+    }
+
+    .blog-post p {
+        font-size: 14px;
+    }
+}
+
+/* Popup Message Styles */
+.popup-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-message.error {
+    background-color: #dc3545;
+}
+
+.popup-message.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-message.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.popup-message i {
+    font-size: 20px;
+}
+
+
+
+/* Ensure all sections have a white background */
+section {
+    background-color: var(--white); /* Background White */
+}
+
+/* Ensure no elements cause overflow */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ...existing code... */

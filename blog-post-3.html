@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Web Development, Website, UI/UX Design">
+    <meta name="description" content="NovaColabs - Elevate your digital presence with innovative web solutions.">
+    <meta name="author" content="NovaColabs">
+    <title>How to Optimize Your Website for Better Performance - NovaColabs Web Solutions</title>
+    <link rel="icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+        .blog-post {
+            padding: 20px; /* Adjust padding for blog post section on mobile */
+            margin-top: 100px;
+        }
+      @media  (max-width: 768px) {
+      
+        .blog-post {
+            padding: 20px; /* Adjust padding for blog post section on mobile */
+            margin-top: 100px;
+        }
+        .blog-post h1 {
+            font-size: 24px; /* Adjust font size for blog post title on mobile */
+        }
+      }
+     
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__header">
+                <div class="nav__logo"></div>
+                    <a href="#" class="logo" aria-label="NovaColabs Logo">
+                        <img src="images/logo.png" alt="NovaColabs Logo" style="width: 140px; height: auto;">
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+            </div>
+           
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a class="btn primary-btn pulse" href="#contact" aria-label="Get in Touch Button">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="container py-5 blog-post">
+    <article>
+        <h1>How to Optimize Your Website for Better Performance</h1>
+        <p>Get tips and strategies on how to optimize your website to improve its performance and user experience.</p>
+        <h2>1. Optimize Images</h2>
+        <p>Large images can slow down your website. Use tools to compress images without losing quality and ensure they are in the right format (e.g., JPEG for photos, PNG for graphics).</p>
+        <h2>2. Minimize HTTP Requests</h2>
+        <p>Reduce the number of elements on your page to minimize HTTP requests. Combine files, use CSS sprites, and reduce the number of images, scripts, and CSS files.</p>
+        <h2>3. Enable Browser Caching</h2>
+        <p>Browser caching stores some of your website's data on the user's device, so they don't have to reload the entire page every time they visit. Set an expiration date for your cache to ensure it stays up-to-date.</p>
+        <h2>4. Use a Content Delivery Network (CDN)</h2>
+        <p>A CDN distributes your website's content across multiple servers around the world, reducing the distance between your server and the user, and improving load times.</p>
+        <h2>5. Minify CSS, JavaScript, and HTML</h2>
+        <p>Minification removes unnecessary characters from your code, such as spaces and comments, to reduce file size and improve load times. Use tools to minify your CSS, JavaScript, and HTML files.</p>
+        <h2>6. Optimize Your Server</h2>
+        <p>Choose a reliable hosting provider and ensure your server is optimized for performance. Use server-side caching, upgrade your server resources, and keep your server software up-to-date.</p>
+        <h2>7. Reduce Redirects</h2>
+        <p>Redirects create additional HTTP requests and increase load times. Minimize the number of redirects on your website to improve performance.</p>
+        <p>By implementing these strategies, you can optimize your website for better performance, providing a faster and more enjoyable experience for your users.</p>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2024 NovaColabs Web solutions. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure the bounce animation happens only once on page load
+      const elements = document.querySelectorAll('.bounce');
+      elements.forEach(element => {
+        element.classList.add('bounce-once');
+      });
+  
+       // Toggle menu for mobile view with animation
+       const menuBtn = document.getElementById('menu-btn');
+      const navLinks = document.getElementById('nav-links');
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        menuBtn.classList.toggle('open'); // Add class to animate the button
+      });
+  
+      // Close navbar dropdown after clicking a nav link
+      const navLinksItems = document.querySelectorAll('.nav__links a');
+      const navMenu = document.getElementById('nav-links');
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+          if (navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+          }
+        });
+      });
+      // Ensure animations happen once on scroll down
+      const animatedElements = document.querySelectorAll('.fade-in, .slide-in, .zoom-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
+  
+      // ScrollReveal animations
+      const scrollRevealOption = {
+        distance: "50px",
+        origin: "bottom",
+        duration: 700, // Reduced duration for faster animations
+      };
+  
+      ScrollReveal().reveal(".hero__content h1", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal(".hero__content p", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+      ScrollReveal().reveal(".hero__content a", {
+        ...scrollRevealOption,
+        delay: 900,
+      });
+      ScrollReveal().reveal(".hero__image .image", {
+        ...scrollRevealOption,
+        origin: "right",
+        delay: 1200,
+      });
+  
+      ScrollReveal().reveal("#benefits .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#benefits .col-md-4", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#deals .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#deals .deal-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#services .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#services .service-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#portfolio .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#portfolio .portfolio-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#testimonials .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#testimonials .testimonial-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#about h2", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#about p", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+  
+      ScrollReveal().reveal("#blog .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#blog .blog-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#faqs .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#faqs .accordion-item", {
+        ...scrollRevealOption,
+        delay: 600,
+        interval: 300,
+      });
+  
+      ScrollReveal().reveal("#contact .section-title", {
+        ...scrollRevealOption,
+        delay: 300,
+      });
+      ScrollReveal().reveal("#contact form", {
+        ...scrollRevealOption,
+        delay: 600,
+      });
+  
+      // FAQ section toggle functionality
+      const faqButtons = document.querySelectorAll('.accordion-button');
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const target = document.querySelector(this.getAttribute('data-bs-target'));
+          const isCollapsed = target.classList.contains('show');
+          if (isCollapsed) {
+            target.classList.remove('show');
+          } else {
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+              collapse.classList.remove('show');
+            });
+            target.classList.add('show');
+          }
+        });
+      });
+  
+      // Contact form submission handling
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent default form submission
+          const form = e.target;
+  
+          fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+          })
+          .then(() => {
+              form.reset(); // Clear the form
+              showPopupMessage("Success! Your message has been sent.", "success"); // Show success message
+          })
+          .catch(() => {
+              showPopupMessage("Oops! Something went wrong. Please try again.", "error"); // Show error message
+          });
+      });
+  
+      // Show WhatsApp popup message regularly
+      const whatsappPopup = document.getElementById('whatsappPopup');
+      setInterval(() => {
+          whatsappPopup.classList.add('show');
+          setTimeout(() => {
+              whatsappPopup.classList.remove('show');
+          }, 3000);
+      }, 10000); // Show every 10 seconds
+  
+      // Function to show popup message
+      function showPopupMessage(message, type) {
+          const popup = document.createElement('div');
+          popup.className = `popup-message ${type} show`;
+          popup.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
+          document.body.appendChild(popup);
+          setTimeout(() => {
+              popup.classList.remove('show');
+              popup.classList.add('hide');
+              setTimeout(() => {
+                  document.body.removeChild(popup);
+              }, 300);
+          }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
