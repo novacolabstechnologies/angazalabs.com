@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&display=swap");
 
 :root {
-    --primary-color: #e63946; /* Vibrant Red */
-    --primary-color-dark: #b71c1c; /* Deep Crimson */
-    --accent-color: #ffb703; /* Bold Golden Yellow */
-    --text-dark: #1a1a1a; /* Almost Black */
-    --text-light: #6c757d; /* Subtle Gray */
-    --light: #f1f3f5; /* Soft Light Gray */
-    --extra-light: #ffffff; /* Pure White */
-    --white: #ffffff; /* Background White */
+    --primary-color: #F57C00;         /* Vibrant orange from the bulb */
+    --primary-color-dark: #E65100;    /* A deeper shade of orange */
+    --accent-color: #FFB300;          /* Warm yellow from the bulb rays */
+    --text-dark: #1E3A5F;             /* Deep navy from the logo text */
+    --text-light: #6c757d;            /* Keep this for softer text */
+    --light: #F5F5F5;                 /* Light gray background */
+    --extra-light: #ffffff;           /* White for contrast */
+    --white: #ffffff;                 /* White again for flexibility */
     --max-width: 1200px;
 }
 
