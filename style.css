@@ -1,17 +1,18 @@
 /* ======================
    Variables & Base Styles
    ====================== */
-   :root {
-    --primary-color: #e63946;
-    --primary-color-dark: #b71c1c;
-    --accent-color: #ffb703;
-    --text-dark: #1a1a1a;
-    --text-light: #6c757d;
-    --light: #f1f3f5;
-    --extra-light: #ffffff;
-    --white: #ffffff;
+:root {
+    --primary-color: #F57C00;         /* Vibrant orange from the bulb */
+    --primary-color-dark: #E65100;    /* A deeper shade of orange */
+    --accent-color: #FFB300;          /* Warm yellow from the bulb rays */
+    --text-dark: #1E3A5F;             /* Deep navy from the logo text */
+    --text-light: #6c757d;            /* Keep this for softer text */
+    --light: #F5F5F5;                 /* Light gray background */
+    --extra-light: #ffffff;           /* White for contrast */
+    --white: #ffffff;                 /* White again for flexibility */
     --max-width: 1200px;
 }
+
 
 /* Reset & Base Elements */
 * {
